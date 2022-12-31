@@ -4,30 +4,31 @@ import java.util.Scanner;
 
 public class TestZoo {
     public static ZooService zs = new ZooImpl();
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
+        System.out.println("MENU\n1. Thêm chuồng\n" + "2. Xóa chuồng\n" + "3. Thêm con vật\n" + "4. Xóa con vật\n"
+                + "5. Xem tất cả các con vật" + "\n6. Thoát");
         int choose;
         do {
-            System.out.println("1. Thêm chuồng\n" + "2. Xóa chuồng\n" + "3. Thêm con vật\n" + "4. Xóa con vật\n"
-                    + "5. Xem tất cả các con vật" + "\n6. Thoát");
+
             System.out.print("Nhập lựa chọn: ");
             choose = new Scanner(System.in).nextInt();
 
             switch (choose) {
                 case 1:
-                zs.themChuongMoi();
-                   break;
+                    zs.themChuongMoi();
+                    break;
                 case 2:
-                zs.xoaChuongCu();
+                    zs.xoaChuongCu();
                     break;
                 case 3:
-                zs.themConVatMoi();
+                    zs.themConVatMoi();
                     break;
                 case 4:
-                zs.xoaConVatCu();
-                   break;
+                    zs.xoaConVatCu();
+                    break;
                 case 5:
-                zs.xemZoo();
+                    zs.xemZoo();
                     break;
                 case 6:
                     break;
