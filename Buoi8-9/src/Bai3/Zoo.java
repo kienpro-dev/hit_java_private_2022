@@ -3,7 +3,7 @@ package Bai3;
 import java.util.ArrayList;
 
 public class Zoo {
-    public ArrayList<Chuong> DanhSachChuong;
+    public ArrayList<Chuong> DanhSachChuong = new ArrayList<Chuong>();
 
     private String ten;
 

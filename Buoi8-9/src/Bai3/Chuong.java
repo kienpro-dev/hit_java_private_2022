@@ -1,18 +1,18 @@
 package Bai3;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Chuong {
-    public ArrayList<Animal> AnimalList;
+    private ArrayList<Animal> AnimalList = new ArrayList<Animal>();;
 
     private int maChuong;
-    
+
     public Chuong() {
 
     }
 
     public Chuong(int maChuong) {
-        this.AnimalList = new ArrayList<Animal>();
         this.maChuong = maChuong;
     }
 
@@ -24,12 +24,25 @@ public class Chuong {
         this.maChuong = maChuong;
     }
 
+    public ArrayList<Animal> getAnimalList() {
+        return AnimalList;
+    }
+
+    public void setAnimalList(ArrayList<Animal> animalList) {
+        AnimalList = animalList;
+    }
+
+    public void input() {
+        Scanner sc = new Scanner(System.in);
+
+    }
+
     public void themConVat(Animal a) {
-        if(a instanceof Tiger) {
+        if (a instanceof Tiger) {
             a = new Tiger(a);
-        } else if(a instanceof Dog) {
+        } else if (a instanceof Dog) {
             a = new Dog(a);
-        } else if(a instanceof Cat) {
+        } else if (a instanceof Cat) {
             a = new Cat(a);
         }
         this.AnimalList.add(a);
@@ -37,7 +50,7 @@ public class Chuong {
 
     public void xoaConVat(String name) {
         for (Animal a : AnimalList) {
-            if(a.getTen().equalsIgnoreCase(name)) {
+            if (a.getTen().equalsIgnoreCase(name)) {
                 AnimalList.remove(a);
                 break;
             }
@@ -45,7 +58,7 @@ public class Chuong {
     }
 
     public void display() {
-        System.out.printf("%-15s %-10d %-10s\n", "Ten", "Tuoi", "Mo ta");
+        System.out.printf("%-15s %-10s %-10s\n", "Ten", "Tuoi", "Mo ta");
         for (Animal a : AnimalList) {
             a.xemThongTin();
         }

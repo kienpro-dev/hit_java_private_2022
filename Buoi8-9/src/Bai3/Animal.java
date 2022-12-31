@@ -1,5 +1,7 @@
 package Bai3;
 
+import java.util.Scanner;
+
 public abstract class Animal {
     private String ten;
     private int tuoi;
@@ -41,6 +43,17 @@ public abstract class Animal {
 
     public void setMoTa(String moTa) {
         this.moTa = moTa;
+    }
+
+    public void input() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Nhap Ten: ");
+        this.setTen(sc.nextLine());
+        System.out.print("Nhap Tuoi: ");
+        this.setTuoi(sc.nextInt());
+        sc.nextLine();
+        System.out.print("Nhap Mo ta: ");
+        this.setMoTa(sc.nextLine());
     }
 
     public abstract void xemThongTin();
