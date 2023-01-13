@@ -5,6 +5,10 @@ import java.util.*;
 public class HoneyServiceImpl implements HoneyService {
     private List<Honey> list;
 
+    public HoneyServiceImpl(List<Honey> list) {
+        this.list = list;
+    }
+
     @Override
     public void addHoney(Honey h) {
         for (Honey honey : list) {

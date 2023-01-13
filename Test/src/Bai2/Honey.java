@@ -45,7 +45,7 @@ public class Honey extends Person {
 
     @Override
     public String toString() {
-        return "Honey [id=" + id + ", status=" + status + ", listF=" + listF + "]";
+        return String.format("%-10s %-5d %-10s %-10s %-10s %-10s",this.getName(), this.getAge(), this.getGender(), this.getPhone(), this.getId(), this.isStatus());
     }
 
     
